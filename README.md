@@ -4,11 +4,7 @@ Text Summarizer is a python app made with tkinter. It uses the Microsoft Godel m
 
 ## Images:
 
-
-![2023-03-17_20-38](https://user-images.githubusercontent.com/62938195/226010131-41fe3edc-8698-491b-afcb-179eb587ef98.png)
-
-![2023-03-17_21-20](https://user-images.githubusercontent.com/62938195/226029027-b7bf1c0d-0276-4ce9-a223-8c988b564b2c.png)
-*New design*
+![2023-03-28_21-33](https://user-images.githubusercontent.com/62938195/228347867-2a1040d8-1c81-4fd8-a0cf-0d6a70160698.png)
 
 ## Installation of requirements
 *You need to have python and pip installed*
