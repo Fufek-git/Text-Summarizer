@@ -27,12 +27,13 @@ def generate():
     # Fix the syntax error here by replacing the curly braces with a colon
     if count < 500:
         beams = 3
-    else:
+    
+    if count > 500:
         beams = 1
-        
+
     input_ids = tokenizer.encode(input_text, return_tensors="pt")
     # Use the value of `beams` that was determined based on `count`
-    outputs = model.generate(input_ids, max_length=int(count / 7), min_length=int(count / 8), top_p=1, do_sample=True, num_beams=beams)
+    outputs = model.generate(input_ids, max_length=int(count / 6), min_length=int(count / 9), top_p=1, do_sample=True, num_beams=beams)
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     response = response.replace("<n>", "\n")
     label.config(text=response)
