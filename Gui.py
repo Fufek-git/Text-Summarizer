@@ -23,11 +23,21 @@ def generate():
     input_text = entry.get("1.0", "end")
     listToStr = ' '.join([str(elem) for elem in input_text])
     count = sum(1 for char in listToStr if char.isalnum())
+    
+    # Fix the syntax error here by replacing the curly braces with a colon
+    if count < 500:
+        beams = 3
+    else:
+        beams = 1
+        
     input_ids = tokenizer.encode(input_text, return_tensors="pt")
-    outputs = model.generate(input_ids, max_length=int(count / 7), min_length=int(count / 8), top_p=1, do_sample=True, num_beams=3)
+    # Use the value of `beams` that was determined based on `count`
+    outputs = model.generate(input_ids, max_length=int(count / 7), min_length=int(count / 8), top_p=1, do_sample=True, num_beams=beams)
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     response = response.replace("<n>", "\n")
     label.config(text=response)
+    print(count)
+
 
 
 def button_command():
