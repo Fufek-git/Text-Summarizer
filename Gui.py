@@ -33,15 +33,15 @@ def generate():
 def button_command():
     generate()
 
-button = tk.Button(root, text="Summarize the Text", width=50, command=button_command, highlightthickness=2, highlightbackground = "blue", height=5)
+button = tk.Button(root, text="Summarize the Text", width=50, command=button_command, highlightthickness=2, highlightbackground = "blue", height=5, bg="#1c1c1c", fg="white")
 button.pack(side="top", fill="both", expand=True, padx=10, pady=10)
 button.pack_propagate(0)
 
-label = tk.Label(root, text="Click The Button to Summarize The Text", borderwidth=2, relief="groove", highlightthickness=3, highlightbackground = "green", height=10)
+label = tk.Label(root, text="Click The Button to Summarize The Text", borderwidth=2, relief="groove", highlightthickness=3, highlightbackground = "green", height=10, bg="#1c1c1c", fg="white")
 label.pack(side="top", fill="both", expand=True, padx=10, pady=10)
 label.pack_propagate(0)
 
-button1 = tk.Button(root, text="Copy The Summarized Text", width=20, command=copy, highlightthickness=3, highlightbackground = "red")
+button1 = tk.Button(root, text="Copy The Summarized Text", width=20, command=copy, highlightthickness=3, highlightbackground = "red", bg="#1c1c1c", fg="white")
 button1.pack(side="top", expand=True, padx=10, pady=10)
 button1.pack_propagate(0)
 
