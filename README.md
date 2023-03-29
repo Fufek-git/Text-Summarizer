@@ -1,6 +1,6 @@
 # Text Summarizer
 
-Text Summarizer is a python app made with tkinter. It uses the Microsoft Godel model, and the app can summarize the text you input.
+Text Summarizer is a python app made with tkinter. It uses the google/pegasus-cnn_dailymail model, and the app can summarize the text you input.
 
 ## Images:
 
